@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BAN — Colección</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+ <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <nav class="nav">
+      <ul class="nav__list nav__list--left">
+        <li><a href="#inicio" class="nav__link">Inicio</a></li>
+        <li><a href="#coleccion" class="nav__link">Colección</a></li>
+        <li><a href="#proximamente" class="nav__link">Próximamente</a></li>
+      </ul>
+
+      <a href="#inicio" class="nav__logo" aria-label="Ir al inicio">
+        <span class="logo-text">BAN</span>
+      </a>
+
+      <ul class="nav__list nav__list--right">
+        <li><a href="#nosotros" class="nav__link">Nosotros</a></li>
+        <li><a href="#contacto" class="nav__link">Contacto</a></li>
+        <li>
+          <a href="#" class="nav__link nav__cart" aria-label="Carrito de compras">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <path d="M16 10a4 4 0 01-8 0"/>
+            </svg>
+            <span>Carrito</span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul class="mobile-menu__list">
+        <li><a href="#inicio" class="mobile-menu__link">Inicio</a></li>
+        <li><a href="#coleccion" class="mobile-menu__link">Colección</a></li>
+        <li><a href="#proximamente" class="mobile-menu__link">Próximamente</a></li>
+        <li><a href="#nosotros" class="mobile-menu__link">Nosotros</a></li>
+        <li><a href="#contacto" class="mobile-menu__link">Contacto</a></li>
+        <li><a href="#" class="mobile-menu__link">Carrito</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="inicio">
+    <div class="hero__media">
+      <img
+  src="assets/images/hero/hero-banner.jpg"
+  alt="BAN Campaign"
+  class="hero__img"
+/>
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="hero__content">
+      <p class="hero__eyebrow fade-in-up delay-1">Colección 2026</p>
+      <h1 class="hero__logo fade-in-up delay-2">BAN</h1>
+      <p class="hero__statement fade-in-up delay-3">
+        Identidad. Movimiento. Expresión.
+      </p>
+      <a href="#coleccion" class="btn btn--light fade-in-up delay-4">Explorar Colección</a>
+    </div>
+    <div class="hero__scroll-indicator">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- FEATURED COLLECTION -->
+  <section class="collection" id="coleccion">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">SS26</p>
+        <h2 class="section-title">Nueva Colección</h2>
+      </div>
+
+      <div class="products-grid">
+
+        <article class="product-card reveal">
+          <div class="product-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=800&q=80&auto=format&fit=crop" alt="Chaqueta BAN Noir" class="product-card__img" />
+            <div class="product-card__overlay">
+              <button class="product-card__quick-add">Agregar al Carrito</button>
+            </div>
+          </div>
+          <div class="product-card__info">
+            <h3 class="product-card__name">Chaqueta Noir</h3>
+            <p class="product-card__price">$580.000 COP</p>
+          </div>
+        </article>
+
+        <article class="product-card reveal">
+          <div class="product-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1622470953794-aa9c70b0fb9d?w=800&q=80&auto=format&fit=crop" alt="Sudadera BAN Void" class="product-card__img" />
+            <div class="product-card__overlay">
+              <button class="product-card__quick-add">Agregar al Carrito</button>
+            </div>
+          </div>
+          <div class="product-card__info">
+            <h3 class="product-card__name">Sudadera Void</h3>
+            <p class="product-card__price">$320.000 COP</p>
+          </div>
+        </article>
+
+        <article class="product-card reveal">
+          <div class="product-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=800&q=80&auto=format&fit=crop" alt="Pantalón BAN Form" class="product-card__img" />
+            <div class="product-card__overlay">
+              <button class="product-card__quick-add">Agregar al Carrito</button>
+            </div>
+          </div>
+          <div class="product-card__info">
+            <h3 class="product-card__name">Pantalón Form</h3>
+            <p class="product-card__price">$420.000 COP</p>
+          </div>
+        </article>
+
+        <article class="product-card reveal">
+          <div class="product-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?w=800&q=80&auto=format&fit=crop" alt="Camiseta BAN Silhouette" class="product-card__img" />
+            <div class="product-card__overlay">
+              <button class="product-card__quick-add">Agregar al Carrito</button>
+            </div>
+          </div>
+          <div class="product-card__info">
+            <h3 class="product-card__name">Camiseta Silhouette</h3>
+            <p class="product-card__price">$185.000 COP</p>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="section-cta reveal">
+        <a href="#" class="btn btn--dark">Ver Toda la Colección</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRAND PHILOSOPHY -->
+  <section class="philosophy" id="nosotros">
+    <div class="philosophy__grid">
+      <div class="philosophy__image-wrap reveal">
+        <img
+          src="https://images.unsplash.com/photo-1516762689617-e1cffcef479d?w=1000&q=85&auto=format&fit=crop"
+          alt="La esencia de BAN"
+          class="philosophy__img"
+        />
+      </div>
+      <div class="philosophy__content reveal">
+        <p class="section-eyebrow">Filosofía</p>
+        <h2 class="section-title">La Esencia<br />de BAN</h2>
+        <p class="philosophy__text">
+          BAN nació en Colombia como una respuesta al ruido. Una marca construida sobre silencios estratégicos, líneas precisas y prendas que hablan sin gritar.
+        </p>
+        <p class="philosophy__text">
+          Cada colección es un manifiesto: identidad sin etiquetas, movimiento sin dirección impuesta, minimalismo como acto de rebeldía. Vestir BAN es elegir la presencia sobre la apariencia.
+        </p>
+        <a href="#contacto" class="btn btn--outline">Conoce Más</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOOKBOOK -->
+  <section class="lookbook">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Editorial</p>
+        <h2 class="section-title">Lookbook</h2>
+      </div>
+      <div class="lookbook__grid">
+        <div class="lookbook__item lookbook__item--tall reveal">
+          <img src="https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?w=800&q=85&auto=format&fit=crop" alt="Lookbook 1" />
+        </div>
+        <div class="lookbook__item reveal">
+          <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=85&auto=format&fit=crop" alt="Lookbook 2" />
+        </div>
+        <div class="lookbook__item reveal">
+          <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=800&q=85&auto=format&fit=crop" alt="Lookbook 3" />
+        </div>
+        <div class="lookbook__item lookbook__item--wide reveal">
+          <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1200&q=85&auto=format&fit=crop" alt="Lookbook 4" />
+        </div>
+        <div class="lookbook__item reveal">
+          <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=800&q=85&auto=format&fit=crop" alt="Lookbook 5" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UPCOMING COLLECTION -->
+  <section class="upcoming" id="proximamente">
+    <div class="upcoming__media">
+      <img
+        src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1800&q=85&auto=format&fit=crop"
+        alt="Próxima Colección"
+        class="upcoming__img"
+      />
+      <div class="upcoming__overlay"></div>
+    </div>
+    <div class="upcoming__content">
+      <p class="section-eyebrow section-eyebrow--light reveal">Próximamente</p>
+      <h2 class="upcoming__title reveal">Colección<br />Oscuridad</h2>
+      <p class="upcoming__desc reveal">
+        Una exploración de contrastes. Tejidos técnicos, siluetas arquitectónicas y una paleta construida desde las sombras. Otoño–Invierno 2026.
+      </p>
+      <p class="upcoming__date reveal">Lanzamiento — Agosto 2026</p>
+      <a href="#newsletter" class="btn btn--light reveal">Recibir Novedades</a>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter" id="newsletter">
+    <div class="container">
+      <div class="newsletter__inner reveal">
+        <p class="section-eyebrow">Comunidad</p>
+        <h2 class="newsletter__title">Únete a la<br />Comunidad BAN</h2>
+        <p class="newsletter__sub">Recibe acceso anticipado a nuevos lanzamientos y colecciones.</p>
+        <form class="newsletter__form" onsubmit="handleNewsletter(event)">
+          <div class="newsletter__input-wrap">
+            <input
+              type="email"
+              class="newsletter__input"
+              placeholder="tucorreo@ejemplo.com"
+              required
+              aria-label="Correo electrónico"
+            />
+            <button type="submit" class="newsletter__btn">Suscribirse</button>
+          </div>
+          <p class="newsletter__legal">Al suscribirte aceptas nuestra <a href="#">Política de Privacidad</a>.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section" id="contacto">
+    <div class="container">
+      <div class="contact-section__inner reveal">
+        <p class="section-eyebrow">Contacto</p>
+        <h2 class="section-title">Hablemos</h2>
+        <p class="contact-section__text">¿Tienes preguntas sobre pedidos, colaboraciones o la marca? Escríbenos.</p>
+        <a href="mailto:hola@ban.co" class="contact-section__email">hola@ban.co</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <a href="#inicio" class="footer__logo">BAN</a>
+        <nav class="footer__nav">
+          <ul class="footer__nav-list">
+            <li><a href="#inicio" class="footer__nav-link">Inicio</a></li>
+            <li><a href="#coleccion" class="footer__nav-link">Colección</a></li>
+            <li><a href="#proximamente" class="footer__nav-link">Próximamente</a></li>
+            <li><a href="#nosotros" class="footer__nav-link">Nosotros</a></li>
+            <li><a href="#contacto" class="footer__nav-link">Contacto</a></li>
+          </ul>
+        </nav>
+        <div class="footer__social">
+          <a href="#" class="footer__social-link" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="TikTok">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.22 8.22 0 004.84 1.56V6.8a4.85 4.85 0 01-1.07-.11z"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__legal">
+          <a href="#">Política de Privacidad</a>
+          <span>·</span>
+          <a href="#">Términos y Condiciones</a>
+        </p>
+        <p class="footer__copy">© 2026 BAN. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
