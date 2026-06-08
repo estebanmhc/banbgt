@@ -102,3 +102,142 @@ if (heroImg) {
     }
   }, { passive: true });
 }
+
+/* ==================================
+   PRODUCT MODAL
+================================== */
+
+const products = {
+
+  camisa1: {
+  title: "Camisa Blanca Diamante",
+  price: "$90.000 COP",
+  description:
+    'Camiseta premium de algodón de silueta oversize amplia y caída natural. Estampada con la frase: "Aprendí que no todo lo que brilla es VVS".',
+
+    images: [
+      "assets/img/products/camisa1/coleccion1_0000s_0000_Mesa-de-trabajo-8.png",
+      "assets/img/products/camisa1/coleccion1_0000s_0002_Mesa-de-trabajo-6.png",
+      "assets/img/products/camisa1/coleccion1_0000s_0005_Mesa-de-trabajo-3.png",
+      "assets/img/products/camisa1/coleccion1_0000s_0007_Mesa-de-trabajo-1.png"
+    ]
+  },
+
+  camisa2: {
+  title: "Camisa Negra Diamante",
+  price: "$90.000 COP",
+  description:
+    'Camiseta premium de algodón de silueta oversize amplia y caída natural. Estampada con la frase: "Aprendí que no todo lo que brilla es VVS".',
+
+    images: [
+      "assets/img/products/camisa2/coleccion1_0000s_0001_Mesa-de-trabajo-7.png",
+      "assets/img/products/camisa2/coleccion1_0000s_0003_Mesa-de-trabajo-5.png",
+      "assets/img/products/camisa2/coleccion1_0000s_0004_Mesa-de-trabajo-4.png",
+      "assets/img/products/camisa2/coleccion1_0000s_0006_Mesa-de-trabajo-2.png"
+    ]
+  },
+
+ camisa3: {
+  title: "Camisa Blanca Reloj",
+  price: "$90.000 COP",
+  description:
+    'Camiseta premium de algodón de silueta oversize amplia y caída natural. Estampada con la frase: "Me pediste un reloj y yo perdiendo mi tiempo".',
+
+    images: [
+      "assets/img/products/camisa3/coleccion1_0000s_0008_Mesa-de-trabajo-6.png",
+      "assets/img/products/camisa3/coleccion1_0000s_0010_Mesa-de-trabajo-4.png",
+      "assets/img/products/camisa3/coleccion1_0000s_0012_Mesa-de-trabajo-2.png"
+    ]
+  },
+
+  camisa4: {
+  title: "Camisa Negra Reloj",
+  price: "$90.000 COP",
+  description:
+    'Camiseta premium de algodón de silueta oversize amplia y caída natural. Estampada con la frase: "Me pediste un reloj y yo perdiendo mi tiempo".',
+    images: [
+      "assets/img/products/camisa4/coleccion1_0000s_0009_Mesa-de-trabajo-5.png",
+      "assets/img/products/camisa4/coleccion1_0000s_0011_Mesa-de-trabajo-3.png",
+      "assets/img/products/camisa4/coleccion1_0000s_0013_Mesa-de-trabajo-1.png",
+      "assets/img/products/camisa4/coleccion1_0000s_0014_Mesa-de-trabajo-7.png"
+    ]
+  }
+
+};
+
+const modal = document.getElementById("productModal");
+const modalImage = document.getElementById("modalMainImage");
+const modalThumbs = document.getElementById("modalThumbs");
+const modalTitle = document.getElementById("modalTitle");
+const modalPrice = document.getElementById("modalPrice");
+const modalDescription = document.getElementById("modalDescription");
+
+document.querySelectorAll(".product-card").forEach(card => {
+
+  card.addEventListener("click", () => {
+
+    const productKey = card.dataset.product;
+
+    const product = products[productKey];
+
+    modalTitle.textContent = product.title;
+    modalPrice.textContent = product.price;
+    modalDescription.textContent = product.description;
+
+    modalImage.src = product.images[0];
+
+    modalThumbs.innerHTML = "";
+
+    product.images.forEach(image => {
+
+      const thumb = document.createElement("img");
+
+      thumb.src = image;
+
+      thumb.addEventListener("click", () => {
+        modalImage.src = image;
+      });
+
+      modalThumbs.appendChild(thumb);
+
+    });
+
+    modal.classList.add("active");
+
+    document.body.classList.add("modal-open");
+
+  });
+
+});
+
+document
+  .querySelector(".product-modal__overlay")
+  .addEventListener("click", closeModal);
+
+document
+  .getElementById("closeModal")
+  .addEventListener("click", closeModal);
+
+function closeModal() {
+
+  modal.classList.remove("active");
+
+  document.body.classList.remove("modal-open");
+
+}
+
+thumb.addEventListener("click", () => {
+
+  modalImage.src = image;
+
+  document
+    .querySelectorAll(".product-modal__thumbs img")
+    .forEach(img => img.classList.remove("active"));
+
+  thumb.classList.add("active");
+
+});
+
+if(modalThumbs.firstChild){
+  modalThumbs.firstChild.classList.add("active");
+}
