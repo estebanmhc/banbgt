@@ -137,12 +137,40 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   height: var(--header-h);
   transition: background 0.4s var(--ease), box-shadow 0.4s var(--ease);
 }
+.nav__logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.logo {
+    height: 42px;
+    width: auto;
+    transition: opacity .3s ease;
+}
+
+.logo--black {
+    position: absolute;
+    opacity: 0;
+}
+
+.logo--white {
+    opacity: 1;
+}
 .header.scrolled {
   background: rgba(255,255,255,0.97);
   box-shadow: 0 1px 0 rgba(0,0,0,0.08);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+}
+
+.header.scrolled .logo--white {
+    opacity: 0;
+}
+
+.header.scrolled .logo--black {
+    opacity: 1;
 }
 
 .nav {
