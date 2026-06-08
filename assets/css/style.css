@@ -864,17 +864,16 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   transition: .3s ease;
 }
 .product-modal__main {
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.product-modal__main img{
-  max-width:100%;
-  max-height:75vh;
-  object-fit:contain;
+.product-modal__main img {
+  width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
 }
-
 .product-modal__thumbs img:hover{
   border:1px solid #000;
 }
@@ -908,17 +907,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   max-height: 90vh;
 
   overflow-y: auto;
-
   background: white;
 
   display: grid;
-  grid-template-columns: 100px 1.5fr 350px;
-
+  grid-template-columns: 120px 1fr 350px;
   gap: 40px;
 
   padding: 40px;
 }
-
 .product-modal__close {
   position: absolute;
 
@@ -947,12 +943,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   border: 1px solid #ddd;
 }
 
-.product-modal__main img {
-  width: 100%;
-  max-height: 80vh;
-
-  object-fit: contain;
-}
 
 .product-modal__info h2 {
   font-family: var(--font-display);

@@ -177,7 +177,6 @@ document.querySelectorAll(".product-card").forEach(card => {
   card.addEventListener("click", () => {
 
     const productKey = card.dataset.product;
-
     const product = products[productKey];
 
     modalTitle.textContent = product.title;
@@ -188,14 +187,26 @@ document.querySelectorAll(".product-card").forEach(card => {
 
     modalThumbs.innerHTML = "";
 
-    product.images.forEach(image => {
+    product.images.forEach((image, index) => {
 
       const thumb = document.createElement("img");
 
       thumb.src = image;
 
+      if (index === 0) {
+        thumb.classList.add("active");
+      }
+
       thumb.addEventListener("click", () => {
+
         modalImage.src = image;
+
+        document
+          .querySelectorAll(".product-modal__thumbs img")
+          .forEach(img => img.classList.remove("active"));
+
+        thumb.classList.add("active");
+
       });
 
       modalThumbs.appendChild(thumb);
@@ -203,7 +214,6 @@ document.querySelectorAll(".product-card").forEach(card => {
     });
 
     modal.classList.add("active");
-
     document.body.classList.add("modal-open");
 
   });
@@ -221,23 +231,6 @@ document
 function closeModal() {
 
   modal.classList.remove("active");
-
   document.body.classList.remove("modal-open");
 
-}
-
-thumb.addEventListener("click", () => {
-
-  modalImage.src = image;
-
-  document
-    .querySelectorAll(".product-modal__thumbs img")
-    .forEach(img => img.classList.remove("active"));
-
-  thumb.classList.add("active");
-
-});
-
-if(modalThumbs.firstChild){
-  modalThumbs.firstChild.classList.add("active");
 }
